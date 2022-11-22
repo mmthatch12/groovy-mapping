@@ -1,16 +1,16 @@
 import com.sap.gateway.ip.core.customdev.util.Message;
 
-//def Message processData(Message message) {
-//    def body = message.getBody(String);
-//    def headerContent = message.getHeaders();
-//    def properties = message.getProperties();
-//
-//    message.setBody(DoMapping(body,headerContent,properties));
-//
-//    return message
-//}
+def Message processData(Message message) {
+    def body = message.getBody(String);
+    def headerContent = message.getHeaders();
+    def properties = message.getProperties();
 
-TestRun();
+    message.setBody(DoMapping(body,headerContent,properties));
+
+    return message
+}
+
+//TestRun();
 
 void TestRun() {
     def scriptDir = new File(getClass().protectionDomain.codeSource.location.path).parent;
@@ -35,8 +35,8 @@ void TestRun() {
     println "field2=" + headers.get("field2") as String;
     println "text2=" + props.get("text2") as String;
 
-//    println outputBody;
-//    outputFile.write outputBody;
+    println outputBody;
+    outputFile.write outputBody;
 }
 
 def DoMapping(String body, Map headerContent, Map properties) {
@@ -49,7 +49,7 @@ def DoMapping(String body, Map headerContent, Map properties) {
     properties.put("text1",text1 + "yep text1");
     properties.put("text2", "yep text2 yali");
 
-    output = body + " completely modified"
+    output = body + " completely modified in Intelij"
 
     return output
 }

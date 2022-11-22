@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?><orders>
+  <order>
+    <header>
+      <idoc_no>888888</idoc_no>
+      <order_no>5000123456</order_no>
+    </header>
+  </order>
+</orders>

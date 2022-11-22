@@ -12,7 +12,7 @@ def Message processData(Message message) {
 }
 
 //Need comment this TestRun() before upload to CPI. This TestRun() for local debug only
-TestRun()
+//TestRun()
 
 void TestRun() {
     def scriptDir = new File(getClass().protectionDomain.codeSource.location.toURI().path).parent

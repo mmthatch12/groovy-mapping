@@ -1,0 +1,30 @@
+{
+    "row": [
+        {
+            "idoc_no": "888888",
+            "order_no": "5000123456",
+            "ship_to": "BBBB-222",
+            "sold_to": "AAAA-111",
+            "order_date": "20211201",
+            "line_item": "00001",
+            "material": "800111",
+            "quantity": "10.000",
+            "quantity_uom": "pce",
+            "weight": "20",
+            "weight_uom": "kgm"
+        },
+        {
+            "idoc_no": "888888",
+            "order_no": "5000123456",
+            "ship_to": "BBBB-222",
+            "sold_to": "AAAA-111",
+            "order_date": "20211201",
+            "line_item": "00002",
+            "material": "800222",
+            "quantity": "100.000",
+            "quantity_uom": "pce",
+            "weight": "200",
+            "weight_uom": "kgm"
+        }
+    ]
+}

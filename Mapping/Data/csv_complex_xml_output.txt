@@ -1,0 +1,412 @@
+<?xml version="1.0" encoding="UTF-8"?><root>
+  <row>
+    <contactid>2</contactid>
+    <contacttype>Individual</contacttype>
+    <contactsubtype/>
+    <donotemail/>
+    <donotphone/>
+    <donotmail/>
+    <donotsms/>
+    <donottrade/>
+    <nobulkemailsuseroptout/>
+    <legalidentifier/>
+    <externalidentifier/>
+    <sortname>Samuels, Jed</sortname>
+    <displayname>Mr. Jed Samuels</displayname>
+    <nickname/>
+    <legalname/>
+    <imageurl/>
+    <preferredcommunicationmethod>SMS</preferredcommunicationmethod>
+    <preferredlanguage/>
+    <preferredmailformat>Both</preferredmailformat>
+    <contacthash>3988235934</contacthash>
+    <contactsource>Sample Data</contactsource>
+    <firstname>Jed</firstname>
+    <middlename/>
+    <lastname>Samuels</lastname>
+    <individualprefix>Mr.</individualprefix>
+    <individualsuffix/>
+    <formaltitle/>
+    <communicationstyle/>
+    <jobtitle/>
+    <gender/>
+    <birthdate/>
+    <deceased/>
+    <deceaseddate/>
+    <householdname/>
+    <organizationname/>
+    <siccode/>
+    <uniqueidopenid/>
+    <currentemployerid>52</currentemployerid>
+    <contactisintrash/>
+    <createddate>2016-08-13 11:07:38</createddate>
+    <modifieddate>2016-08-13 11:07:42</modifieddate>
+    <addressee>Mr. Jed Samuels</addressee>
+    <emailgreeting>Dear Jed</emailgreeting>
+    <postalgreeting>Dear Jed</postalgreeting>
+    <currentemployer>Urban Empowerment Fund</currentemployer>
+    <locationtype>Work</locationtype>
+    <streetaddress>190Y Cadell Ave SE</streetaddress>
+    <streetnumber>190</streetnumber>
+    <streetnumbersuffix>Y</streetnumbersuffix>
+    <streetname>Cadell</streetname>
+    <streetunit/>
+    <supplementaladdress1>Attn: Development</supplementaladdress1>
+    <supplementaladdress2/>
+    <city>Bowmanstown</city>
+    <postalcodesuffix/>
+    <postalcode>18030</postalcode>
+    <latitude>40.80116</latitude>
+    <longitude>-75.66158</longitude>
+    <addressname/>
+    <masteraddressbelongsto>Urban Empowerment Fund</masteraddressbelongsto>
+    <county>Alameda</county>
+    <state>PA</state>
+    <country>United States</country>
+    <phone>265-5630</phone>
+    <phoneextension/>
+    <email>jeds@notmail.co.pl</email>
+    <onhold/>
+    <useforbulkmail/>
+    <signaturetext/>
+    <signaturehtml/>
+    <improvider/>
+    <imscreenname/>
+    <openid/>
+    <worldregion>America South, Central, North and Caribbean</worldregion>
+    <website/>
+    <groups>Newsletter Subscribers</groups>
+    <tags/>
+    <notes/>
+    <phonetype>Phone</phonetype>
+    <imserviceprovider/>
+  </row>
+  <row>
+    <contactid>3</contactid>
+    <contacttype>Individual</contacttype>
+    <contactsubtype/>
+    <donotemail/>
+    <donotphone/>
+    <donotmail/>
+    <donotsms/>
+    <donottrade/>
+    <nobulkemailsuseroptout/>
+    <legalidentifier/>
+    <externalidentifier/>
+    <sortname>smith.o.carylon98@spamalot.co.uk</sortname>
+    <displayname>smith.o.carylon98@spamalot.co.uk</displayname>
+    <nickname/>
+    <legalname/>
+    <imageurl/>
+    <preferredcommunicationmethod>SMS</preferredcommunicationmethod>
+    <preferredlanguage/>
+    <preferredmailformat>Both</preferredmailformat>
+    <contacthash>990362788</contacthash>
+    <contactsource>Sample Data</contactsource>
+    <firstname/>
+    <middlename/>
+    <lastname/>
+    <individualprefix/>
+    <individualsuffix/>
+    <formaltitle/>
+    <communicationstyle/>
+    <jobtitle/>
+    <gender/>
+    <birthdate/>
+    <deceased/>
+    <deceaseddate/>
+    <householdname/>
+    <organizationname/>
+    <siccode/>
+    <uniqueidopenid/>
+    <currentemployerid/>
+    <contactisintrash/>
+    <createddate>2016-08-13 11:07:38</createddate>
+    <modifieddate>2016-08-13 11:07:39</modifieddate>
+    <addressee>smith.o.carylon98@spamalot.co.uk</addressee>
+    <emailgreeting>Dear smith.o.carylon98@spamalot.co.uk</emailgreeting>
+    <postalgreeting>Dear smith.o.carylon98@spamalot.co.uk</postalgreeting>
+    <currentemployer/>
+    <locationtype/>
+    <streetaddress/>
+    <streetnumber/>
+    <streetnumbersuffix/>
+    <streetname/>
+    <streetunit/>
+    <supplementaladdress1/>
+    <supplementaladdress2/>
+    <city/>
+    <postalcodesuffix/>
+    <postalcode/>
+    <latitude/>
+    <longitude/>
+    <addressname/>
+    <masteraddressbelongsto/>
+    <county/>
+    <state/>
+    <country/>
+    <phone/>
+    <phoneextension/>
+    <email>smith.o.carylon98@spamalot.co.uk</email>
+    <onhold/>
+    <useforbulkmail/>
+    <signaturetext/>
+    <signaturehtml/>
+    <improvider/>
+    <imscreenname/>
+    <openid/>
+    <worldregion/>
+    <website/>
+    <groups>Newsletter Subscribers</groups>
+    <tags/>
+    <notes/>
+    <phonetype/>
+    <imserviceprovider/>
+  </row>
+  <row>
+    <contactid>4</contactid>
+    <contacttype>Individual</contacttype>
+    <contactsubtype/>
+    <donotemail/>
+    <donotphone>1</donotphone>
+    <donotmail/>
+    <donotsms/>
+    <donottrade/>
+    <nobulkemailsuseroptout/>
+    <legalidentifier/>
+    <externalidentifier/>
+    <sortname>Grant, Lawerence</sortname>
+    <displayname>Mr. Lawerence Grant II</displayname>
+    <nickname/>
+    <legalname/>
+    <imageurl/>
+    <preferredcommunicationmethod/>
+    <preferredlanguage/>
+    <preferredmailformat>Both</preferredmailformat>
+    <contacthash>2064444768</contacthash>
+    <contactsource>Sample Data</contactsource>
+    <firstname>Lawerence</firstname>
+    <middlename/>
+    <lastname>Grant</lastname>
+    <individualprefix>Mr.</individualprefix>
+    <individualsuffix>II</individualsuffix>
+    <formaltitle/>
+    <communicationstyle/>
+    <jobtitle/>
+    <gender>Male</gender>
+    <birthdate/>
+    <deceased/>
+    <deceaseddate/>
+    <householdname/>
+    <organizationname/>
+    <siccode/>
+    <uniqueidopenid/>
+    <currentemployerid/>
+    <contactisintrash/>
+    <createddate>2016-08-13 11:07:38</createddate>
+    <modifieddate>2016-08-13 11:07:43</modifieddate>
+    <addressee>Mr. Lawerence Grant II</addressee>
+    <emailgreeting>Dear Lawerence</emailgreeting>
+    <postalgreeting>Dear Lawerence</postalgreeting>
+    <currentemployer/>
+    <locationtype>Home</locationtype>
+    <streetaddress>176T Dowlen Blvd S</streetaddress>
+    <streetnumber>176</streetnumber>
+    <streetnumbersuffix>T</streetnumbersuffix>
+    <streetname>Dowlen</streetname>
+    <streetunit/>
+    <supplementaladdress1/>
+    <supplementaladdress2/>
+    <city>Boston</city>
+    <postalcodesuffix/>
+    <postalcode>02266</postalcode>
+    <latitude>42.338947</latitude>
+    <longitude>-70.919635</longitude>
+    <addressname/>
+    <masteraddressbelongsto/>
+    <county>Alameda</county>
+    <state>MA</state>
+    <country>United States</country>
+    <phone/>
+    <phoneextension/>
+    <email/>
+    <onhold/>
+    <useforbulkmail/>
+    <signaturetext/>
+    <signaturehtml/>
+    <improvider/>
+    <imscreenname/>
+    <openid/>
+    <worldregion>America South, Central, North and Caribbean</worldregion>
+    <website/>
+    <groups/>
+    <tags>Volunteer</tags>
+    <notes/>
+    <phonetype/>
+    <imserviceprovider/>
+  </row>
+  <row>
+    <contactid>5</contactid>
+    <contacttype>Individual</contacttype>
+    <contactsubtype/>
+    <donotemail/>
+    <donotphone/>
+    <donotmail/>
+    <donotsms/>
+    <donottrade/>
+    <nobulkemailsuseroptout/>
+    <legalidentifier/>
+    <externalidentifier/>
+    <sortname>Terrell, Russell</sortname>
+    <displayname>Russell Terrell Jr.</displayname>
+    <nickname/>
+    <legalname/>
+    <imageurl/>
+    <preferredcommunicationmethod>Postal Mail</preferredcommunicationmethod>
+    <preferredlanguage/>
+    <preferredmailformat>Both</preferredmailformat>
+    <contacthash>127505299</contacthash>
+    <contactsource>Sample Data</contactsource>
+    <firstname>Russell</firstname>
+    <middlename/>
+    <lastname>Terrell</lastname>
+    <individualprefix/>
+    <individualsuffix>Jr.</individualsuffix>
+    <formaltitle/>
+    <communicationstyle/>
+    <jobtitle/>
+    <gender>Male</gender>
+    <birthdate>1996-05-04</birthdate>
+    <deceased/>
+    <deceaseddate/>
+    <householdname/>
+    <organizationname/>
+    <siccode/>
+    <uniqueidopenid/>
+    <currentemployerid/>
+    <contactisintrash/>
+    <createddate>2016-08-13 11:07:38</createddate>
+    <modifieddate>2016-08-13 11:07:42</modifieddate>
+    <addressee>Russell Terrell Jr.</addressee>
+    <emailgreeting>Dear Russell</emailgreeting>
+    <postalgreeting>Dear Russell</postalgreeting>
+    <currentemployer/>
+    <locationtype>Home</locationtype>
+    <streetaddress>235X States Path NE</streetaddress>
+    <streetnumber>235</streetnumber>
+    <streetnumbersuffix>X</streetnumbersuffix>
+    <streetname>States</streetname>
+    <streetunit/>
+    <supplementaladdress1/>
+    <supplementaladdress2/>
+    <city>Valrico</city>
+    <postalcodesuffix/>
+    <postalcode>33595</postalcode>
+    <latitude>27.871964</latitude>
+    <longitude>-82.438841</longitude>
+    <addressname/>
+    <masteraddressbelongsto>Terrell family</masteraddressbelongsto>
+    <county>Alameda</county>
+    <state>FL</state>
+    <country>United States</country>
+    <phone/>
+    <phoneextension/>
+    <email/>
+    <onhold/>
+    <useforbulkmail/>
+    <signaturetext/>
+    <signaturehtml/>
+    <improvider/>
+    <imscreenname/>
+    <openid/>
+    <worldregion>America South, Central, North and Caribbean</worldregion>
+    <website/>
+    <groups/>
+    <tags>Volunteer</tags>
+    <notes/>
+    <phonetype/>
+    <imserviceprovider/>
+  </row>
+  <row>
+    <contactid>6</contactid>
+    <contacttype>Individual</contacttype>
+    <contactsubtype/>
+    <donotemail/>
+    <donotphone>1</donotphone>
+    <donotmail/>
+    <donotsms/>
+    <donottrade/>
+    <nobulkemailsuseroptout/>
+    <legalidentifier/>
+    <externalidentifier/>
+    <sortname>Adams, Scarlet</sortname>
+    <displayname>Scarlet Adams</displayname>
+    <nickname/>
+    <legalname/>
+    <imageurl/>
+    <preferredcommunicationmethod>Phone</preferredcommunicationmethod>
+    <preferredlanguage/>
+    <preferredmailformat>Both</preferredmailformat>
+    <contacthash>2620107037</contacthash>
+    <contactsource>Sample Data</contactsource>
+    <firstname>Scarlet</firstname>
+    <middlename>W</middlename>
+    <lastname>Adams</lastname>
+    <individualprefix/>
+    <individualsuffix/>
+    <formaltitle/>
+    <communicationstyle/>
+    <jobtitle/>
+    <gender>Female</gender>
+    <birthdate>1957-11-05</birthdate>
+    <deceased/>
+    <deceaseddate/>
+    <householdname/>
+    <organizationname/>
+    <siccode/>
+    <uniqueidopenid/>
+    <currentemployerid/>
+    <contactisintrash/>
+    <createddate>2016-08-13 11:07:38</createddate>
+    <modifieddate>2016-08-13 11:07:40</modifieddate>
+    <addressee>Scarlet Adams</addressee>
+    <emailgreeting>Dear Scarlet</emailgreeting>
+    <postalgreeting>Dear Scarlet</postalgreeting>
+    <currentemployer/>
+    <locationtype/>
+    <streetaddress/>
+    <streetnumber/>
+    <streetnumbersuffix/>
+    <streetname/>
+    <streetunit/>
+    <supplementaladdress1/>
+    <supplementaladdress2/>
+    <city/>
+    <postalcodesuffix/>
+    <postalcode/>
+    <latitude/>
+    <longitude/>
+    <addressname/>
+    <masteraddressbelongsto/>
+    <county/>
+    <state/>
+    <country/>
+    <phone>(449) 428-2300</phone>
+    <phoneextension/>
+    <email>adamss68@lol.biz</email>
+    <onhold/>
+    <useforbulkmail/>
+    <signaturetext/>
+    <signaturehtml/>
+    <improvider/>
+    <imscreenname/>
+    <openid/>
+    <worldregion/>
+    <website/>
+    <groups>Newsletter Subscribers</groups>
+    <tags>Major Donor,Volunteer</tags>
+    <notes/>
+    <phonetype>Phone</phonetype>
+    <imserviceprovider/>
+  </row>
+</root>

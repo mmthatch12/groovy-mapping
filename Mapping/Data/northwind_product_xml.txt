@@ -1,0 +1,20 @@
+<root>
+	<row>
+		<Action>U</Action>
+		<ID>602</ID>
+		<Name>Keyboard AAA</Name>
+		<Price>10</Price>
+	</row>
+	<row>
+		<Action>U</Action>
+		<ID>603</ID>
+		<Name>Keyboard BBB</Name>
+		<Price>20</Price>
+	</row>
+	<row>
+		<Action>C</Action>
+		<ID>604</ID>
+		<Name>Keyboard New</Name>
+		<Price>30</Price>
+	</row>
+</root>

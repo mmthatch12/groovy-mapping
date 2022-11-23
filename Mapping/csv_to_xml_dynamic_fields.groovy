@@ -28,8 +28,10 @@ void TestRun() {
     Map headers = [:]
     Map props = [:]
 
-    File inputFile = new File("$dataDir//csv_data_no_header.txt")
-    File outputFile = new File("$dataDir//csv_data_no_header_xml_output.txt")
+//    File inputFile = new File("$dataDir//csv_data_with_header.txt")
+//    File outputFile = new File("$dataDir//csv_data_with_header_xml_output.txt")
+    File inputFile = new File("$dataDir//csv_complex.txt")
+    File outputFile = new File("$dataDir//csv_complex_xml_output.txt")
 
     def inputBody = inputFile.getText("UTF-8")
     def outputBody = DoMapping(inputBody, headers, props)
@@ -39,11 +41,8 @@ void TestRun() {
 }
 
 def DoMapping(String body, Map headers, Map properties) {
-    /*If want drop the first header line*/
-    //body = body.readLines().drop(1).join('\r\n')
-
     ICsvMapReader mapReader = new CsvMapReader(new StringReader(body), CsvPreference.STANDARD_PREFERENCE)
-    String[] header = ["idoc_no", "order_no", "ship_to", "sold_to", "order_date", "line_item", "material", "quantity", "quantity_uom", "weight", "weight_uom"]
+    String[] header = mapReader.getHeader(true)
     int columnsCount = header.length
     CellProcessor[] processor = new CellProcessor[columnsCount]
     def rowMap = [:]
@@ -56,7 +55,7 @@ def DoMapping(String body, Map headers, Map properties) {
             while ((rowMap = mapReader.read(header, processor)) != null) {
                 row {
                     for (int i = 0; i < header.length; i++) {
-                        def fieldName = header[i]
+                        def fieldName = formatFieldName(header[i])
                         "$fieldName"(rowMap[header[i]])
                     }
                 }
@@ -68,4 +67,10 @@ def DoMapping(String body, Map headers, Map properties) {
     def output = XmlUtil.serialize(writer.toString())
 
     return output
+}
+
+def formatFieldName(String fieldName) {
+    fieldName = fieldName.replaceAll("[^a-zA-Z0-9]", "")
+    fieldName = fieldName.toLowerCase()
+    return fieldName
 }

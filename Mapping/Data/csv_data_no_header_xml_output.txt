@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?><root>
+  <row>
+    <idoc_no>888888</idoc_no>
+    <order_no>5000123456</order_no>
+    <ship_to>BBBB-222</ship_to>
+    <sold_to>AAAA-111</sold_to>
+    <order_date>20211201</order_date>
+    <line_item>00001</line_item>
+    <material>800111</material>
+    <quantity>10.000</quantity>
+    <quantity_uom>pce</quantity_uom>
+    <weight>20</weight>
+    <weight_uom>kgm</weight_uom>
+  </row>
+  <row>
+    <idoc_no>888888</idoc_no>
+    <order_no>5000123456</order_no>
+    <ship_to>BBBB-222</ship_to>
+    <sold_to>AAAA-111</sold_to>
+    <order_date>20211201</order_date>
+    <line_item>00002</line_item>
+    <material>800222</material>
+    <quantity>100.000</quantity>
+    <quantity_uom>pce</quantity_uom>
+    <weight>200</weight>
+    <weight_uom>kgm</weight_uom>
+  </row>
+</root>

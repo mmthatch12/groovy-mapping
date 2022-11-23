@@ -9,5 +9,6 @@
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="library" name="groovy-2.5.19" level="project" />
     <orderEntry type="library" name="CPI Library" level="project" />
+    <orderEntry type="library" name="super-csv-2.4.0" level="project" />
   </component>
 </module>

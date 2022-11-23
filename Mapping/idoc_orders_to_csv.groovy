@@ -46,18 +46,18 @@ def DoMapping(String body, Map headers, Map properties) {
     def sw = new StringWriter()
 
     //Use default standard preference
-    def mapWriter = new CsvMapWriter(sw, CsvPreference.STANDARD_PREFERENCE)
+//    def mapWriter = new CsvMapWriter(sw, CsvPreference.STANDARD_PREFERENCE)
 
     /*Use default standard preference with QuoteMode*/
 //    CsvPreference StandardAlwaysQuote = new CsvPreference.Builder(CsvPreference.STANDARD_PREFERENCE).useQuoteMode(new AlwaysQuoteMode()).build()
 //    def mapWriter = new CsvMapWriter(sw, StandardAlwaysQuote)
 
     /*Use custom preference - Pipe delimited*/
-//    char quoteChar = '"'
-//    int delimiterChar = '|'
-//    String endOfLine = "\r\n"
-//    CsvPreference PipeDelimited = new CsvPreference.Builder(quoteChar, delimiterChar, endOfLine).build()
-//    def mapWriter = new CsvMapWriter(sw, PipeDelimited)
+    char quoteChar = '"'
+    int delimiterChar = '|'
+    String endOfLine = "\r\n"
+    CsvPreference PipeDelimited = new CsvPreference.Builder(quoteChar, delimiterChar, endOfLine).build()
+    def mapWriter = new CsvMapWriter(sw, PipeDelimited)
 
     /*If header not required no need use writeHeader*/
     mapWriter.writeHeader(header)

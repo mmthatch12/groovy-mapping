@@ -1,0 +1,33 @@
+--batch_xyz
+Content-Type: multipart/mixed; boundary=changeset_1
+
+--changeset_1
+Content-Type: application/http
+Content-Transfer-Encoding:binary
+
+PUT Products(602) HTTP/1.1
+Content-Type: application/json
+
+{"ID":602,"Name":"Keyboard AAA","Price":"10"}
+
+--changeset_1
+Content-Type: application/http
+Content-Transfer-Encoding:binary
+
+PUT Products(603) HTTP/1.1
+Content-Type: application/json
+
+{"ID":603,"Name":"Keyboard BBB","Price":"20"}
+
+--changeset_1
+Content-Type: application/http
+Content-Transfer-Encoding:binary
+
+POST Products HTTP/1.1
+Content-Type: application/json
+
+{"ID":604,"Name":"Keyboard New","Price":"30"}
+
+--changeset_1--
+
+--batch_xyz--

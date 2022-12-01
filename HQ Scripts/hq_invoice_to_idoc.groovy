@@ -192,6 +192,52 @@ def DoMapping(String body, Map headers, Map properties) {
                         KOEIN("")
                     }
 
+//                    Document header taxes
+                    E1EDK04(SEGMENT: '1') {
+//                        VAT indicator – field length: 7
+                        MWSKZ("")
+//                        VAT rate – field length: 17
+                        MSATZ("")
+//                        Value added tax amount – field length: 18
+                        MWSBT("")
+                    }
+
+//                    Document Header Terms of Delivery
+                    E1EDK17(SEGMENT: '1') {
+//                        IDOC qualifier: Terms of delivery – field length: 3
+                        QUALF("")
+//                        IDOC delivery condition code – field length: 3
+                        LKOND("")
+//                        IDOC delivery condition text – field length: 70
+                        LKTEXT("")
+                    }
+
+//                    Document Header Terms of Payment
+                    E1EDK18(SEGMENT: '1') {
+//                        IDOC qualifier: Terms of payment – field length: 3
+                        QUALF("")
+//                        IDOC Number of days – field length: 8
+                        TAGE("")
+//                        IDOC percentage for terms of payment – field length: 8
+                        PRZNT("")
+//                        Text line – field length: 70
+                        ZTERM_TXT("")
+                    }
+
+//                    Document Header Currency Segment
+                    E1EDK23(SEGMENT: '1') {
+//                        Qualifier currency – field length: 3
+                        QUALF("")
+//                        IDOC Number of days – field length: 8
+                        WAERZ("")
+//                        Three-digit character field for IDocs – field length: 3
+                        WAERQ("")
+//                        Character Field of Length 12 – field length: 12
+                        KURS("")
+//                        IDOC: Date – field length: 8
+                        DATUM("")
+                    }
+
                     this_invoice.items.each{ this_item ->
                         E1EDP01(SEGMENT: '1') {
                             POSEX(this_item.oproduct_id ?: "")

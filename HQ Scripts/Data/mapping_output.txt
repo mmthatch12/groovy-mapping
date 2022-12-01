@@ -1,1 +1,115 @@
-<?xml version="1.0" encoding="UTF-8"?><ORDERS05/>
+<?xml version="1.0" encoding="UTF-8"?><ORDERS05>
+  <IDOC BEGIN="1">
+    <EDI_DC40 BEGIN="1">
+      <TABNAM>EDI_DC 40</TABNAM>
+      <DIRECT>2</DIRECT>
+      <IDOCTYP>ORDERS05</IDOCTYP>
+      <CIMTYP/>
+      <MESTYP>ORDERS</MESTYP>
+      <SNDPOR>XYZPORT</SNDPOR>
+      <SNDPRT>LS</SNDPRT>
+      <SNDPFC/>
+      <SNDPRN>XYZ</SNDPRN>
+      <RCVPOR>SAPSID</RCVPOR>
+      <RCVPRT>LS</RCVPRT>
+      <RCVPFC/>
+      <RCVPRN>SIDCLNT100</RCVPRN>
+    </EDI_DC40>
+    <E1EDK01 SEGMENT="1">
+      <BELNR>24182326</BELNR>
+    </E1EDK01>
+    <E1EDK03 SEGMENT="1">
+      <IDDAT>012</IDDAT>
+      <DATUM>2022-11-28 22:56:23</DATUM>
+    </E1EDK03>
+    <E1EDKA1 SEGMENT="1">
+      <PARVW>AG</PARVW>
+      <DATUM>1422462</DATUM>
+    </E1EDKA1>
+    <E1EDKA1 SEGMENT="1">
+      <PARVW>WE</PARVW>
+      <DATUM>1422462</DATUM>
+    </E1EDKA1>
+    <E1EDP01 SEGMENT="1">
+      <POSEX>19689</POSEX>
+      <MENGE>1</MENGE>
+      <MENEE/>
+      <NTGEW/>
+      <GEWEI/>
+    </E1EDP01>
+  </IDOC>
+  <IDOC BEGIN="1">
+    <EDI_DC40 BEGIN="1">
+      <TABNAM>EDI_DC 40</TABNAM>
+      <DIRECT>2</DIRECT>
+      <IDOCTYP>ORDERS05</IDOCTYP>
+      <CIMTYP/>
+      <MESTYP>ORDERS</MESTYP>
+      <SNDPOR>XYZPORT</SNDPOR>
+      <SNDPRT>LS</SNDPRT>
+      <SNDPFC/>
+      <SNDPRN>XYZ</SNDPRN>
+      <RCVPOR>SAPSID</RCVPOR>
+      <RCVPRT>LS</RCVPRT>
+      <RCVPFC/>
+      <RCVPRN>SIDCLNT100</RCVPRN>
+    </EDI_DC40>
+    <E1EDK01 SEGMENT="1">
+      <BELNR>24192455</BELNR>
+    </E1EDK01>
+    <E1EDK03 SEGMENT="1">
+      <IDDAT>012</IDDAT>
+      <DATUM>2022-11-30 00:24:27</DATUM>
+    </E1EDK03>
+    <E1EDKA1 SEGMENT="1">
+      <PARVW>AG</PARVW>
+      <DATUM>13226244</DATUM>
+    </E1EDKA1>
+    <E1EDKA1 SEGMENT="1">
+      <PARVW>WE</PARVW>
+      <DATUM>13226244</DATUM>
+    </E1EDKA1>
+    <E1EDP01 SEGMENT="1">
+      <POSEX>75336</POSEX>
+      <MENGE>1</MENGE>
+      <MENEE/>
+      <NTGEW/>
+      <GEWEI/>
+    </E1EDP01>
+    <E1EDP01 SEGMENT="1">
+      <POSEX>96127</POSEX>
+      <MENGE>1</MENGE>
+      <MENEE/>
+      <NTGEW/>
+      <GEWEI/>
+    </E1EDP01>
+    <E1EDP01 SEGMENT="1">
+      <POSEX>99568</POSEX>
+      <MENGE>2</MENGE>
+      <MENEE/>
+      <NTGEW/>
+      <GEWEI/>
+    </E1EDP01>
+    <E1EDP01 SEGMENT="1">
+      <POSEX>82441</POSEX>
+      <MENGE>1</MENGE>
+      <MENEE/>
+      <NTGEW/>
+      <GEWEI/>
+    </E1EDP01>
+    <E1EDP01 SEGMENT="1">
+      <POSEX>75348</POSEX>
+      <MENGE>2</MENGE>
+      <MENEE/>
+      <NTGEW/>
+      <GEWEI/>
+    </E1EDP01>
+    <E1EDP01 SEGMENT="1">
+      <POSEX>99552</POSEX>
+      <MENGE>1</MENGE>
+      <MENEE/>
+      <NTGEW/>
+      <GEWEI/>
+    </E1EDP01>
+  </IDOC>
+</ORDERS05>

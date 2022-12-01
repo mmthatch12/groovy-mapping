@@ -116,18 +116,80 @@ def DoMapping(String body, Map headers, Map properties) {
 //                        billing category
                         FKTYP("")
                     }
+//                      document header partner information can loop to get all parties (sold to (AG), ship to(WE))
+                    E1EDKA1(SEGMENT: '1') {
+//                        Partner function (e.g. sold-to party, ship-to party, …) – field length: 3
+                        PARVW("012")
+//                        PARTN – Partner number – field length: 17
+                        PARTN("")
+//                        Vendor number at customer location – field length: 17
+                        LIFNR("")
+//                        Name 1 – field length: 35
+                        NAME1("")
+//                        Street and house number 1 – field length: 35
+                        STRAS("")
+//                        Street and house number 2 – field length: 35
+                        STRS2("")
+//                        PO Box – field length: 35
+                        PFACH("")
+//                        City – field length: 35
+                        ORT01("")
+//                        County code – field length: 9
+                        COUNC("")
+//                        Postal code – field length: 9
+                        PSTLZ("")
+//                        Country Key – field length: 3
+                        LAND1("")
+//                        Language key – field length: 1
+                        SPRAS("")
+//                        IDoc user name – field length: 35
+                        BNAME("")
+//                        IDOC organization code – field length: 30
+                        PAORG("")
+                    }
 
+//                      document header reference data loop
+                    E1EDK02(SEGMENT: '1') {
+//                        IDOC qualifier reference document – field length: 3
+                        QUALF("")
+//                        IDOC document number – field length: 35
+                        BELNR("")
+//                        Item number – field length: 6
+                        POSNR("")
+                        DATUM(this_invoice.oorder_date ?: "")
+                    }
+
+//                    document header date segment loop
                     E1EDK03(SEGMENT: '1') {
                         IDDAT("012")
                         DATUM(this_invoice.oorder_date ?: "")
                     }
-                    E1EDKA1(SEGMENT: '1') {
-                        PARVW("AG")
-                        DATUM(this_invoice.ocustomer_account_id ?: "")
-                    }
-                    E1EDKA1(SEGMENT: '1') {
-                        PARVW("WE")
-                        DATUM(this_invoice.ocustomer_account_id ?: "")
+//                      document header conditions
+                    E1EDK05(SEGMENT: '1') {
+//                        Surcharge or discount indicator – field length: 3
+                        ALCKZ("")
+//                        Condition type (coded) – field length: 4
+                        KSCHL(this_invoice.oorder_date ?: "")
+//                        Condition text – field length: 80
+                        KOTXT("")
+//                        Fixed surcharge/discount on total gross – field length: 18
+                        BETRG("")
+//                        Condition percentage rate – field length: 8
+                        KPERC("")
+//                        Condition record per unit – field length: 15
+                        KRATE("")
+//                        Price unit – field length: 9
+                        UPRBS("")
+//                        Unit of measurement – field length: 3
+                        MEAUN("")
+//                        IDoc condition end amount – field length: 18
+                        KOBTR("")
+//                        VAT indicator – field length: 7
+                        MWSKZ("")
+//                        VAT rate – field length: 17
+                        MSATZ("")
+//                        Currency – field length: 3
+                        KOEIN("")
                     }
 
                     this_invoice.items.each{ this_item ->

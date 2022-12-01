@@ -116,10 +116,10 @@ def DoMapping(String body, Map headers, Map properties) {
 //                        billing category
                         FKTYP("")
                     }
-//                      document header partner information can loop to get all parties (sold to (AG), ship to(WE))
+//                      document header partner information can loop to get all parties (sold to (AG), ship to(WE)) CUSTOMER INFO
                     E1EDKA1(SEGMENT: '1') {
 //                        Partner function (e.g. sold-to party, ship-to party, …) – field length: 3
-                        PARVW("012")
+                        PARVW("AG")
 //                        PARTN – Partner number – field length: 17
                         PARTN("")
 //                        Vendor number at customer location – field length: 17
@@ -153,23 +153,23 @@ def DoMapping(String body, Map headers, Map properties) {
 //                        IDOC qualifier reference document – field length: 3
                         QUALF("")
 //                        IDOC document number – field length: 35
-                        BELNR("")
+                        BELNR(this_invoice.oinvoice_id ?: "")
 //                        Item number – field length: 6
                         POSNR("")
-                        DATUM(this_invoice.oorder_date ?: "")
+                        DATUM(this_invoice.oinvoice_date ?: "")
                     }
 
 //                    document header date segment loop
                     E1EDK03(SEGMENT: '1') {
                         IDDAT("012")
-                        DATUM(this_invoice.oorder_date ?: "")
+                        DATUM(this_invoice.oinvoice_date ?: "")
                     }
 //                      document header conditions
                     E1EDK05(SEGMENT: '1') {
 //                        Surcharge or discount indicator – field length: 3
                         ALCKZ("")
 //                        Condition type (coded) – field length: 4
-                        KSCHL(this_invoice.oorder_date ?: "")
+                        KSCHL("")
 //                        Condition text – field length: 80
                         KOTXT("")
 //                        Fixed surcharge/discount on total gross – field length: 18
@@ -212,7 +212,7 @@ def DoMapping(String body, Map headers, Map properties) {
                         LKTEXT("")
                     }
 
-//                    Document Header Terms of Payment
+//                    Document Header Terms of Payment opayment_term_id comes from order
                     E1EDK18(SEGMENT: '1') {
 //                        IDOC qualifier: Terms of payment – field length: 3
                         QUALF("")
@@ -238,39 +238,128 @@ def DoMapping(String body, Map headers, Map properties) {
                         DATUM("")
                     }
 
-                    this_invoice.items.each{ this_item ->
+//                    Document Header Bank Data
+                    E1EDK17(SEGMENT: '1') {
+//                        Country Key – field length: 3
+                        BCOUN("")
+//                        Bank name – field length: 70
+                        BNAME("")
+//                        Account number in bank data – field length: 30
+                        ACNUM("")
+//                        Account holder in bank data – field length: 35
+                        ACNAM("")
+                    }
+
+//                    E1EDK29 – Document Header General Foreign Trade Data
+//                    E1EDKT1 – Document Header Text Identification
+//                    E1EDKT2 – Document Header Texts
+
+//                    Document Header Organizational Data
+                    E1EDK14(SEGMENT: '1') {
+//                        IDOC qualifer organization – field length: 3
+                        QUALF("")
+//                        IDOC organization – field length: 35
+                        ORGID("")
+                    }
+
+                    this_invoice.invoiceItems.each{ this_item ->
+//                        Document Item General Data ITEMS DATA Loop through these
                         E1EDP01(SEGMENT: '1') {
-                            POSEX(this_item.oproduct_id ?: "")
-                            MENGE(this_item.oorder_item_quantity ?: "")
-
-//                            quantity unit of measurement
-                            String V_MENEE = ""
-                            V_MENEE = V_MENEE.toUpperCase()
-                            MENEE(V_MENEE)
-
-//                            weight
+//                        Item number – field length: 6
+                            POSEX(this_invoice.oinvoice_item_id ?: "")
+//                        Quantity – field length: 15
+                            MENGE(this_invoice.oinvoice_item_quantity ?: "")
+//                        Unit of measure – field length: 3
+                            MENEE("")
+//                        Net weight – field length: 18
                             NTGEW("")
+//                        Weight unit – field length: 3
+                            GEWEI("")
+//                        Total weight – field length: 18
+                            BRGEW("")
+//                        Sales document item category – field length: 4
+                            PSTYV("")
+//                        Plant – field length: 4
+                            WERKS("")
 
-//                            weight unit of measurement
-                            String V_GEWEI = ""
-                            V_GEWEI = V_GEWEI.toUpperCase()
-                            GEWEI(V_GEWEI)
+//                        Document Item Reference Data loopable inside outer E1EDP01
+                            E1EDP02(SEGMENT: '1') {
+//                            IDOC qualifier reference document – field length: 3
+                                QUALF("")
+//                            IDOC document number – field length: 35
+                                BELNR("")
+//                            IDOC: Date – field length: 8
+                                DATUM("")
+                            }
 
-//                            this_item.schedule.each{ this_schedule ->
-//                                E1EDP20(SEGMENT: '1') {
-//                                    WMENG(this_schedule.schedule_qty ?: "")
-//                                    EDATU(this_schedule.schedule_date ?: "")
-//                                }
-//                            }
-//
-//                            E1EDP19(SEGMENT: '1') {
-//                                QUALF("001")
-//
-//                                String V_IDTNR = this_item.material ?: ""
-//                                V_IDTNR = V_IDTNR.padLeft(18, "0")
-//                                IDTNR(V_IDTNR)
-//                            }
+//                        Document Item Date Segment
+                            E1EDP03(SEGMENT: '1') {
+//                            Qualifier for IDOC date segment – field length: 3
+                                IDDAT("")
+//                            Date – field length: 8
+                                DATUM("")
+                            }
+
+//                        Document Item Object Identification
+                            E1EDP19(SEGMENT: '1') {
+//                            IDOC object identification such as material no.,customer – field length: 3
+                                QUALF("")
+//                            IDOC material ID – field length: 35
+                                IDTNR("")
+                            }
+
+//                          Document Item Amount Segment
+                            E1EDP26(SEGMENT: '1') {
+//                            Qualifier amount – field length: 3
+                                QUALF("")
+//                            Total value of sum segment – field length: 18
+                                BETRG(this_invoice.oinvoice_item_amount ?: "")
+                            }
+
+//                        Document Item Partner Information
+                            E1EDPA1(SEGMENT: '1') {
+//                            Partner function (e.g. sold-to party, ship-to party, …) – field length: 3
+                                PARVW("")
+//                            Partner number – field length: 17
+                                PARTN("")
+//                            Name 1 – field length: 35
+                                NAME1("")
+//                            Street and house number 1 – field length: 35
+                                STRAS("")
+//                            City – field length: 35
+                                ORT01("")
+//                            Postal code – field length: 9
+                                PSTLZ("")
+//                            Country Key – field length: 3
+                                LAND1("")
+//                            1st telephone number of contact person – field length: 25
+                                TELF1("")
+//                            Fax number – field length: 25
+                                TELFX("")
+//                            Language key – field length: 1
+                                SPRAS("")
+//                            2-Character SAP Language Code – field length: 2
+                                SPRAS_ISO("")
+                            }
+
+//                        E1EDP05 – Document Item Conditions
+//                        E1EDP04 – Document Item Taxes
+//                        E1EDP28 – Document Item – General Foreign Trade Data
+//                        E1EDP08 – Package Data Individual
+//                        E1EDP30 – Document Item Account Assignment Intercompany Billing
+//                        E1EDPT1 – Document Item Text Identification
+//                        E1EDPT2 – Document Item Texts
                         }
+                    }
+
+//                    Summary segment general
+                    E1EDS01(SEGMENT: '1') {
+//                        Qualifier for totals segment for shipping notification – field length: 3
+                        SUMID("")
+//                        Total value of sum segment – field length: 18
+                        SUMME(this_invoice.oinvoice_total ?: "")
+//                        Currency – field length: 3
+                        WAERQ("USD")
                     }
                 }
             }

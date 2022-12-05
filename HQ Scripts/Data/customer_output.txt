@@ -3,7 +3,7 @@
     <EDI_DC40 BEGIN="1">
       <TABNAM>EDI_DC40</TABNAM>
       <MANDT>100</MANDT>
-      <DOCNUM/>
+      <DOCNUM>1423457</DOCNUM>
       <DOCREL/>
       <STATUS/>
       <DIRECT>1</DIRECT>
@@ -21,7 +21,7 @@
       <RCVPRN>SIDCLNT100</RCVPRN>
     </EDI_DC40>
     <E1KNA1M SEGMENT="1">
-      <KUNNR/>
+      <KUNNR>1423457</KUNNR>
       <ANRED/>
       <BEGRU/>
       <BRSCH/>
@@ -30,7 +30,7 @@
       <KTOKD/>
       <KUKLA/>
       <LAND1/>
-      <NAME1/>
+      <NAME1>Test Company 123456789123456789123</NAME1>
       <ORT01/>
       <PFACH/>
       <PSTL2/>

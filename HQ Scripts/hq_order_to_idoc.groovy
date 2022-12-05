@@ -26,7 +26,7 @@ void TestRun() {
     props.put("ReceiverPartner", "SIDCLNT100")
 
     File inputFile = new File("$dataDir//hq_order.txt")
-    File outputFile = new File("$dataDir//mapping_output.txt")
+    File outputFile = new File("$dataDir//order_output.txt")
 
     def inputBody = inputFile.getText("UTF-8")
     def outputBody = DoMapping(inputBody, headers, props)

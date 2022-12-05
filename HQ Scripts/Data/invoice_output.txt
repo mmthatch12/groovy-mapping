@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?><INVOIC02>
+  <IDOC BEGIN="1">
+    <EDI_DC40 BEGIN="1">
+      <TABNAM>EDI_DC40</TABNAM>
+      <MANDT>100</MANDT>
+      <DOCNUM>19056688</DOCNUM>
+      <DOCREL/>
+      <STATUS/>
+      <DIRECT>1</DIRECT>
+      <OUTMOD/>
+      <IDOCTYP>INVOIC02</IDOCTYP>
+      <MESTYP>INVOIC</MESTYP>
+      <CIMTYP/>
+      <SNDPOR>XYZPORT</SNDPOR>
+      <SNDPRT>LS</SNDPRT>
+      <SNDPFC/>
+      <SNDPRN>XYZ</SNDPRN>
+      <RCVPOR>SAPSID</RCVPOR>
+      <RCVPRT>LS</RCVPRT>
+      <RCVPFC>LS</RCVPFC>
+      <RCVPRN>SIDCLNT100</RCVPRN>
+    </EDI_DC40>
+    <E1EDK01 SEGMENT="1">
+      <CURCY>USD</CURCY>
+      <HWAER/>
+      <WKURS/>
+      <ZTERM/>
+      <KUNDEUINR/>
+      <EIGENUINR/>
+      <BSART>INVO</BSART>
+      <BELNR>19056688</BELNR>
+      <NTGEW/>
+      <BRGEW/>
+      <GEWEI/>
+      <FKART_RL/>
+      <RECIPNT_NO/>
+      <FKTYP/>
+    </E1EDK01>
+    <E1EDKA1 SEGMENT="1">
+      <PARVW>AG</PARVW>
+      <PARTN>6068961</PARTN>
+      <LIFNR/>
+      <NAME1>Kohls.com</NAME1>
+      <STRAS>56 North 17000 West</STRAS>
+      <STRS2>Ridgewood Drive</STRS2>
+      <PFACH/>
+      <ORT01>Menomonee Falls</ORT01>
+      <COUNC>WI</COUNC>
+      <PSTLZ>53051</PSTLZ>
+      <LAND1>US</LAND1>
+      <SPRAS/>
+      <BNAME/>
+      <PAORG/>
+    </E1EDKA1>
+    <E1EDK02 SEGMENT="1">
+      <QUALF/>
+      <BELNR>19056688</BELNR>
+      <POSNR/>
+      <DATUM>2022-12-01 00:10:10</DATUM>
+    </E1EDK02>
+    <E1EDK03 SEGMENT="1">
+      <IDDAT>012</IDDAT>
+      <DATUM>2022-12-01 00:10:10</DATUM>
+    </E1EDK03>
+    <E1EDK05 SEGMENT="1">
+      <ALCKZ/>
+      <KSCHL/>
+      <KOTXT/>
+      <BETRG/>
+      <KPERC/>
+      <KRATE/>
+      <UPRBS/>
+      <MEAUN/>
+      <KOBTR/>
+      <MWSKZ/>
+      <MSATZ/>
+      <KOEIN/>
+    </E1EDK05>
+    <E1EDK04 SEGMENT="1">
+      <MWSKZ/>
+      <MSATZ/>
+      <MWSBT/>
+    </E1EDK04>
+    <E1EDK17 SEGMENT="1">
+      <QUALF/>
+      <LKOND/>
+      <LKTEXT/>
+    </E1EDK17>
+    <E1EDK18 SEGMENT="1">
+      <QUALF/>
+      <TAGE/>
+      <PRZNT/>
+      <ZTERM_TXT/>
+    </E1EDK18>
+    <E1EDK23 SEGMENT="1">
+      <QUALF/>
+      <WAERZ/>
+      <WAERQ/>
+      <KURS/>
+      <DATUM/>
+    </E1EDK23>
+    <E1EDK17 SEGMENT="1">
+      <BCOUN/>
+      <BNAME/>
+      <ACNUM/>
+      <ACNAM/>
+    </E1EDK17>
+    <E1EDK14 SEGMENT="1">
+      <QUALF/>
+      <ORGID/>
+    </E1EDK14>
+    <E1EDS01 SEGMENT="1">
+      <SUMID/>
+      <SUMME>132.5</SUMME>
+      <WAERQ>USD</WAERQ>
+    </E1EDS01>
+  </IDOC>
+</INVOIC02>

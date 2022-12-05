@@ -25,8 +25,8 @@ void TestRun() {
     props.put("ReceiverPort", "SAPSID")
     props.put("ReceiverPartner", "SIDCLNT100")
 
-    File inputFile = new File("$dataDir//hq_order.txt")
-    File outputFile = new File("$dataDir//mapping_output.txt")
+    File inputFile = new File("$dataDir//hq_invoice.txt")
+    File outputFile = new File("$dataDir//invoice_output.txt")
 
     def inputBody = inputFile.getText("UTF-8")
     def outputBody = DoMapping(inputBody, headers, props)
@@ -43,7 +43,6 @@ def DoMapping(String body, Map headers, Map properties) {
     //Required Idoc Control Record variables
     def V_TABNAM = "EDI_DC40"
     def V_MANDT = "100"
-    def V_DOCNUM = ""
     def V_DOCREL = ""
     def V_STATUS = ""
     def V_DIRECT = "1"
@@ -70,7 +69,7 @@ def DoMapping(String body, Map headers, Map properties) {
                     EDI_DC40(BEGIN: '1') {
                         TABNAM("$V_TABNAM")
                         MANDT("$V_MANDT")
-                        DOCNUM("$V_DOCNUM")
+                        DOCNUM(this_invoice.oinvoice_id ?: "")
                         DOCREL("$V_DOCREL")
                         STATUS("$V_STATUS")
                         DIRECT("$V_DIRECT")
@@ -121,25 +120,25 @@ def DoMapping(String body, Map headers, Map properties) {
 //                        Partner function (e.g. sold-to party, ship-to party, …) – field length: 3
                         PARVW("AG")
 //                        PARTN – Partner number – field length: 17
-                        PARTN("")
+                        PARTN(this_invoice.customer.ocustomer_id ?: "")
 //                        Vendor number at customer location – field length: 17
                         LIFNR("")
 //                        Name 1 – field length: 35
-                        NAME1("")
+                        NAME1(this_invoice.customer.ocustomer_company ?: "")
 //                        Street and house number 1 – field length: 35
-                        STRAS("")
+                        STRAS(this_invoice.customer.billing_address.oaddress_street_1 ?: "")
 //                        Street and house number 2 – field length: 35
-                        STRS2("")
+                        STRS2(this_invoice.customer.billing_address.oaddress_street_2 ?: "")
 //                        PO Box – field length: 35
                         PFACH("")
 //                        City – field length: 35
-                        ORT01("")
+                        ORT01(this_invoice.customer.billing_address.oaddress_locality ?: "")
 //                        County code – field length: 9
-                        COUNC("")
+                        COUNC(this_invoice.customer.billing_address.oaddress_region ?: "")
 //                        Postal code – field length: 9
-                        PSTLZ("")
+                        PSTLZ(this_invoice.customer.billing_address.oaddress_postcode ?: "")
 //                        Country Key – field length: 3
-                        LAND1("")
+                        LAND1(this_invoice.customer.billing_address.country.ocountry_code ?: "")
 //                        Language key – field length: 1
                         SPRAS("")
 //                        IDoc user name – field length: 35

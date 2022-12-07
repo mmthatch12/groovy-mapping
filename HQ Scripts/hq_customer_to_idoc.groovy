@@ -13,7 +13,7 @@ def Message processData(Message message) {
 }
 
 //Need comment this TestRun() before upload to CPI. This TestRun() for local debug only
-TestRun()
+//TestRun()
 
 void TestRun() {
     def scriptDir = new File(getClass().protectionDomain.codeSource.location.toURI().path).parent
@@ -109,7 +109,7 @@ def DoMapping(String body, Map headers, Map properties) {
 //                        Country Key – field length: 3
                         LAND1("")
 //                        Name 1 – field length: 35
-                        NAME1(this_customer.ocustomer_company.substring(0,34) ?: "")
+                        NAME1(this_customer.ocustomer_company ?: "")
 //                        City – field length: 35
                         ORT01("")
 //                        PO Box – field length: 10

@@ -87,11 +87,11 @@ def DoMapping(String body, Map headers, Map properties) {
                     }
                     E1EDKA1(SEGMENT: '1') {
                         PARVW("AG")
-                        DATUM(this_order.ocustomer_account_id ?: "")
+                        PARTN(this_order.ocustomer_account_id ?: "")
                     }
                     E1EDKA1(SEGMENT: '1') {
                         PARVW("WE")
-                        DATUM(this_order.ocustomer_account_id ?: "")
+                        PARTN(this_order.ocustomer_account_id ?: "")
                     }
 
                     this_order.items.each{ this_item ->

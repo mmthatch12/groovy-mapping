@@ -261,13 +261,13 @@ def DoMapping(String body, Map headers, Map properties) {
                         ORGID("")
                     }
 
-                    this_invoice.invoiceItems.each{ this_item ->
+                    this_invoice.invoice_items.each{ this_item ->
 //                        Document Item General Data ITEMS DATA Loop through these
                         E1EDP01(SEGMENT: '1') {
 //                        Item number – field length: 6
-                            POSEX(this_invoice.oinvoice_item_id ?: "")
+                            POSEX(this_item.oinvoice_item_id ?: "")
 //                        Quantity – field length: 15
-                            MENGE(this_invoice.oinvoice_item_quantity ?: "")
+                            MENGE(this_item.oinvoice_item_quantity ?: "")
 //                        Unit of measure – field length: 3
                             MENEE("")
 //                        Net weight – field length: 18
@@ -312,7 +312,7 @@ def DoMapping(String body, Map headers, Map properties) {
 //                            Qualifier amount – field length: 3
                                 QUALF("")
 //                            Total value of sum segment – field length: 18
-                                BETRG(this_invoice.oinvoice_item_amount ?: "")
+                                BETRG(this_item.oinvoice_item_amount ?: "")
                             }
 
 //                        Document Item Partner Information
